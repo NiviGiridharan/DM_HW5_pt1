@@ -67,10 +67,11 @@ def question3():
     answers = {}
 
     # type: string
-    answers['Agree?'] = None
+    answers['Agree?'] = 'No'
 
     # type: explain_string
-    answers['Explain'] = None
+    answers['Explain'] = "No, Alan's method is not valid. Ensemble methods improve prediction by combining classifiers that are individually better than random. Coin flipping has no predictive power; it's inherently random and does not utilize any information about the stock market."
+    
     return answers
 
 
@@ -79,13 +80,13 @@ def question4():
     answers = {}
 
     # type: bool
-    answers['(a) e=0.5, independent'] = None
+    answers['(a) e=0.5, independent'] = False
 
     # type: bool
-    answers['(b), independent'] = None
+    answers['(b), independent'] = True
 
     # type: bool
-    answers['(c) identical'] = None
+    answers['(c) identical'] = False
     return answers
 
 
