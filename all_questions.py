@@ -203,18 +203,24 @@ def question9():
 
     # type: dict[string,float]
     # keys: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) metrics'] = None
+    answers['(i) metrics'] = {
+        'recall': 0.5333,
+        'precision': 0.6154,
+        'F-measure': 0.5714,
+        'accuracy': 0.88
+    }
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) best metric?'] = None
+    answers['(i) best metric?'] = 'F-measure'
 
     # type: string
     # choices: ['recall', 'precision', 'F-measure', 'accuracy']
-    answers['(i) worst metric?'] = None
+    answers['(i) worst metric?'] = 'accuracy'
 
     # type: explain_string
-    answers['(ii) Explain your choices of best and worst metrics'] = None
+    answers['(ii) Explain your choices of best and worst metrics'] = "F-measure merges precision and recall into one, making it the top metric among the three. Accuracy can be misleading with imbalanced classes, as it only counts total mistakes without considering the type (like the difference between false positives and false negatives)."
+    
     return answers
 
 
@@ -224,21 +230,22 @@ def question10():
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(a) better test based on F-measure?'] = None
+    answers['(a) better test based on F-measure?'] = 'T1'
 
     # type: string
     # choices: ['T1', 'T2']
-    answers['(b) better test based on TPR/FPR?'] = None
+    answers['(b) better test based on TPR/FPR?'] = 'T2'
 
     # type: string
     # choices: ['F1', 'TPR/FPR']
-    answers['(c) Which evaluation measure to use between the two tests?'] = None
+    answers['(c) Which evaluation measure to use between the two tests?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) Which evaluation measure? Explain'] = None
+    answers['(c) Which evaluation measure? Explain'] = "TPR/FPR should be used because it emphasizes the importance of correctly identifying positive cases (true positives) while minimizing the false positives, which is crucial for a cancer detection test where missing a positive case can have severe consequences."
 
     # type: explain_string
-    answers['(d) Example scenario where you would reverse choise in (c)'] = None
+    answers['(d) Example scenario where you would reverse choise in (c)'] = "If the consequences of false positives are significant, such as causing unnecessary stress, additional medical procedures, or other harms, the F1 measure would be preferred as it provides a balance between precision and recall, minimizing both false positives and false negatives."
+    
     return answers
 #-----------------------------------------------------------
 if __name__ == '__main__':
