@@ -96,19 +96,19 @@ def question5():
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(a)'] = None
+    answers['(a)'] = 'iii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(b)'] = None
+    answers['(b)'] = 'i'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(c)'] = None
+    answers['(c)'] = 'ii'
 
     # type: string
     # choices: ['i', 'ii', 'iii', 'iv']
-    answers['(d)'] = None
+    answers['(d)'] = 'iv'
     return answers
 
 
@@ -117,31 +117,31 @@ def question6():
     answers = {}
 
     # type: eval_float
-    answers['(a) C1-TPR'] = None
+    answers['(a) C1-TPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-TPR'] = None
+    answers['(a) C2-TPR'] = "2*p"
 
     # type: eval_float
-    answers['(a) C1-FPR'] = None
+    answers['(a) C1-FPR'] = "p"
 
     # type: eval_float
-    answers['(a) C2-FPR'] = None
+    answers['(a) C2-FPR'] = "2*p"
 
     # type: string
     # Hint: The random guess line in an ROC curve corresponds to TPR=FPR.
     # choices: ['yes', 'no']
-    answers['(b) C2 better classifier than C1?'] = None
+    answers['(b) C2 better classifier than C1?'] = 'no'
 
     # type: explain_string
-    answers['(b) C2 better classifier than C1? Explain'] = None
+    answers['(b) C2 better classifier than C1? Explain'] = "No, C2 is not better because both classifiers would fall on the random guess line of an ROC curve, indicating no improvement in distinguishing between classes."
 
     # type: string
     # choices: ['TPR/FPR', 'precision/recall']
-    answers['(c) Which metric?'] = None
+    answers['(c) Which metric?'] = 'TPR/FPR'
 
     # type: explain_string
-    answers['(c) explain'] = None
+    answers['(c) explain'] = "Precision/recall doesn't cover the gap between true positives and false positives. TPR/FPR are better, showing how well the classifier detects positives and its randomness."
     return answers
 
 
@@ -151,24 +151,24 @@ def question7():
 
     # type: string
     # choices: ['C1', 'C2', 'None']
-    answers['(i) Best classifier?'] = None
+    answers['(i) Best classifier?'] = 'C2' 
 
     # type: explain_string
-    answers['(i) Best classifier, explain'] = None
+    answers['(i) Best classifier, explain'] = "Neither C1 nor C2 is the best classifier. C1 has a very low recall compared to C2, while C2 has a high false positive rate. There is a trade-off between identifying positive instances and incorrectly predicting negative instances as positive."
 
     # type: string
     # choices: ['TPR-FPR', 'precision-recall-F1-Measure']
-    answers['(ii) appropriate metric pair'] = None
+    answers['(ii) appropriate metric pair'] = 'precision-recall-F1-Measure'
 
     # type: explain_string
-    answers['(ii) appropriate metric pair, explain'] = None
+    answers['(ii) appropriate metric pair, explain'] = "Precision, recall, and F1-Measure are the appropriate metrics as they provide a balanced view of the classifier's ability to correctly identify positive cases while minimizing false positives, which is crucial for evaluating performance on imbalanced datasets."
 
     # type: string
     # choices: ['C1', 'C2', 'C3']
-    answers['(iii) preferred classifier?'] = None
+    answers['(iii) preferred classifier?'] = 'C3' 
 
     # type: explain_string
-    answers['(iii) best classifier, explain'] = None
+    answers['(iii) best classifier, explain'] = "C3 should be preferred over C1 and C2 as it offers a better balance between precision and recall, indicated by its F1-measure. It has higher precision than both C1 and C2 and a reasonable recall rate with a lower FPR compared to C2."
     return answers
 
 
